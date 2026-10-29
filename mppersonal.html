@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moniepoint Personal App Guidelines</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --monie-blue: #0052FF;
+      --monie-dark: #0A192F;
+      --monie-yellow: #FFC700;
+      --bg-light: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --border-color: #E2E8F0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--card-bg);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.2rem 0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--monie-blue);
+      text-decoration: none;
+    }
+
+    .badge {
+      background-color: #EBF2FF;
+      color: var(--monie-blue);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin: 3rem 0 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      color: var(--monie-dark);
+      margin-bottom: 0.8rem;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* Guidelines Grid */
+    .guidelines-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .guideline-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      background-color: #EBF2FF;
+      color: var(--monie-blue);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .card-header h2 {
+      font-size: 1.25rem;
+      color: var(--monie-dark);
+    }
+
+    .guideline-list {
+      list-style: none;
+    }
+
+    .guideline-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.8rem;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .guideline-list li::before {
+      content: "•";
+      color: var(--monie-blue);
+      font-weight: bold;
+      font-size: 1.2rem;
+      position: absolute;
+      left: 0;
+      top: -2px;
+    }
+
+    /* Warning Box */
+    .security-notice {
+      background-color: #FFFBEB;
+      border: 1px solid #FCD34D;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .notice-icon {
+      background-color: var(--monie-yellow);
+      color: var(--monie-dark);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .notice-text h3 {
+      font-size: 1.05rem;
+      color: var(--monie-dark);
+      margin-bottom: 0.3rem;
+    }
+
+    .notice-text p {
+      font-size: 0.9rem;
+      color: #78350F;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container header-content">
+      <a href="#" class="brand">Moniepoint</a>
+      <span class="badge">Personal Banking Guidelines</span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container">
+    <div class="hero">
+      <h1>Personal Usage Guidelines</h1>
+      <p>Essential standards and security best practices to help you manage your Moniepoint personal account safely and effectively.</p>
+    </div>
+
+    <!-- Security Warning -->
+    <div class="security-notice">
+      <div class="notice-icon">!</div>
+      <div class="notice-text">
+        <h3>Critical Security Warning</h3>
+        <p>Moniepoint staff will <strong>NEVER</strong> call, message, or email you requesting your 4-digit PIN, account password, or OTP. Never share credentials under any circumstance.</p>
+      </div>
+    </div>
+
+    <!-- Guidelines Grid -->
+    <div class="guidelines-grid">
+      
+      <!-- Card 1 -->
+      <div class="guideline-card">
+        <div class="card-header">
+          <div class="card-icon">🔐</div>
+          <h2>Account Setup & Security</h2>
+        </div>
+        <ul class="guideline-list">
+          <li><strong>Identity Alignment:</strong> Ensure your BVN and NIN match your official identification documents during registration.</li>
+          <li><strong>Biometrics:</strong> Enable Fingerprint or Face ID authentication for secure, multi-factor login access.</li>
+          <li><strong>Device Access:</strong> Limit application login strictly to your primary mobile phone.</li>
+        </ul>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="guideline-card">
+        <div class="card-header">
+          <div class="card-icon">⚡</div>
+          <h2>Transfers & Limits</h2>
+        </div>
+        <ul class="guideline-list">
+          <li><strong>Tier Upgrades:</strong> Submit required KYC documentation to upgrade from Tier 1 to Tier 3 for increased transfer limits.</li>
+          <li><strong>Receipt Check:</strong> Always verify inward transaction alerts inside the app inbox rather than relying solely on SMS notifications.</li>
+          <li><strong>Dispensations:</strong> Check transaction history status before retrying pending or delayed transfers.</li>
+        </ul>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="guideline-card">
+        <div class="card-header">
+          <div class="card-icon">💳</div>
+          <h2>Card Safety & Support</h2>
+        </div>
+        <ul class="guideline-list">
+          <li><strong>Instant Freeze:</strong> Use the in-app card toggle to block your debit card immediately if misplaced or stolen.</li>
+          <li><strong>ATM Usage:</strong> Ensure no unauthorized individual views your transaction PIN at POS terminals or ATMs.</li>
+          <li><strong>Official Support:</strong> Report disputes directly through the in-app help center or verified official email channels.</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; Moniepoint Microfinance Bank. Fully licensed by the Central Bank of Nigeria (CBN) and insured by NDIC.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

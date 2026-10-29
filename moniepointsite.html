@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moniepoint - Financial Services & Mobile App Download</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      line-height: 1.6;
+      color: #1A1A1A;
+      background-color: #F8F9FA;
+    }
+
+    /* Color Palette Variables */
+    :root {
+      --primary-blue: #0052FF;
+      --dark-blue: #0A192F;
+      --accent-yellow: #FFC700;
+      --light-bg: #F0F4FF;
+      --white: #FFFFFF;
+      --text-muted: #5E6C84;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Header & Navigation */
+    header {
+      background-color: var(--white);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--primary-blue);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary-blue);
+    }
+
+    .cta-btn {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+
+    .cta-btn:hover {
+      background-color: #003ECC;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, var(--white) 0%, var(--light-bg) 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      color: var(--dark-blue);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-text p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+
+    .app-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      background-color: var(--dark-blue);
+      color: var(--white);
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .store-btn:hover {
+      opacity: 0.9;
+    }
+
+    .mockup-card {
+      background-color: var(--primary-blue);
+      color: var(--white);
+      padding: 3rem;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0, 82, 255, 0.2);
+    }
+
+    .mockup-card h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Download Guide Section */
+    .download-guide {
+      padding: 5rem 0;
+      background-color: var(--white);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--dark-blue);
+      margin-bottom: 3rem;
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .step-card {
+      background: var(--F8F9FA);
+      border: 1px solid #E1E8ED;
+      padding: 2rem;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .step-number {
+      background-color: var(--accent-yellow);
+      color: var(--dark-blue);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .step-card h3 {
+      margin-bottom: 0.8rem;
+      color: var(--dark-blue);
+    }
+
+    .step-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Features Section */
+    .features {
+      padding: 5rem 0;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background-color: var(--white);
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+
+    .feature-card h3 {
+      color: var(--primary-blue);
+      margin-bottom: 1rem;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+    }
+
+    /* Security Banner */
+    .security-banner {
+      background-color: var(--dark-blue);
+      color: var(--white);
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .security-banner p {
+      margin-top: 0.8rem;
+      color: #A0AEC0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #050E1E;
+      color: #A0AEC0;
+      padding: 3rem 0 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #2D3748;
+      padding-bottom: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links a {
+      color: #A0AEC0;
+      text-decoration: none;
+      margin-left: 1.5rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">Moniepoint</a>
+        <ul class="nav-links">
+          <li><a href="mppersonal.html">Personal</a></li>
+          <li><a href="mpbusiness.html">Business</a></li>
+          <li><a href="mpdownload.html">Download App</a></li>
+        </ul>
+        <a href="https://moniepoint.com" class="cta-btn">Get Started</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Banking for Businesses & Individuals</h1>
+        <p>Experience seamless, reliable transfers, instant card issuing, business banking solutions, and POS payment terminal integration with Moniepoint.</p>
+        <div class="app-buttons">
+          <a href="https://play.google.com/store/apps/details?id=com.moniepoint.personal" target="_blank" class="store-btn">Google Play</a>
+          <a href="https://apps.apple.com/ng/app/moniepoint-business-banking/id1661134941" target="_blank" class="store-btn">App Store</a>
+        </div>
+      </div>
+      <div class="mockup-card">
+        <h3>Moniepoint App</h3>
+        <p>Fast transfers, instant notifications, and complete control of your business and personal finances.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Guide Section -->
+  <section class="download-guide" id="download">
+    <div class="container">
+      <h2 class="section-title">How to Download the Official Moniepoint App</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Open Your App Store</h3>
+          <p>Launch the official Google Play Store (Android) or Apple App Store (iOS) on your mobile device.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Search for Moniepoint</h3>
+          <p>Type <strong>"Moniepoint Personal Banking"</strong> or <strong>"Moniepoint Business"</strong> into the search bar.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Verify Official Publisher</h3>
+          <p>Ensure the app developer is listed as <strong>Moniepoint Microfinance Bank</strong> to avoid fake downloads.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h3>Install & Sign Up</h3>
+          <p>Tap <strong>Install</strong> or <strong>Get</strong>, open the application once completed, and register or log in using your registered details.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Why Choose Moniepoint?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Reliable Transfers</h3>
+          <p>Enjoy industry-leading transaction success rates and near-instant settlement on all inward and outward transfers.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Business Banking</h3>
+          <p>Request POS devices, generate official invoices, track business analytics, and manage payroll effortless in one place.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Instant Cards</h3>
+          <p>Request and receive physical or virtual debit cards tailored for fast local and international payments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security Banner -->
+  <section class="security-banner">
+    <div class="container">
+      <h2>Licensed & Regulated</h2>
+      <p>Moniepoint Microfinance Bank is licensed by the Central Bank of Nigeria (CBN) and insured by the NDIC.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; Moniepoint. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="mpprivacypolicy.html">Privacy Policy</a>
+          <a href="mptos.html">Terms of Service</a>
+          <a href="mpsupport.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

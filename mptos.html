@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moniepoint Terms of Service Guidelines</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --monie-blue: #0052FF;
+      --monie-dark: #0A192F;
+      --monie-yellow: #FFC700;
+      --bg-light: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --text-main: #1E293B;
+      --text-muted: #64748B;
+      --border-color: #E2E8F0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--card-bg);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1.2rem 0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--monie-blue);
+      text-decoration: none;
+    }
+
+    .badge {
+      background-color: #EBF2FF;
+      color: var(--monie-blue);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      margin: 3rem 0 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      color: var(--monie-dark);
+      margin-bottom: 0.8rem;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    /* Guidelines Grid */
+    .guidelines-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .guideline-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      background-color: #EBF2FF;
+      color: var(--monie-blue);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .card-header h2 {
+      font-size: 1.25rem;
+      color: var(--monie-dark);
+    }
+
+    .guideline-list {
+      list-style: none;
+    }
+
+    .guideline-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.8rem;
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .guideline-list li::before {
+      content: "•";
+      color: var(--monie-blue);
+      font-weight: bold;
+      font-size: 1.2rem;
+      position: absolute;
+      left: 0;
+      top: -2px;
+    }
+
+    /* Warning Box */
+    .security-notice {
+      background-color: #FEF2F2;
+      border: 1px solid #FECACA;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 3rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .notice-icon {
+      background-color: #DC2626;
+      color: #FFFFFF;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .notice-text h3 {
+      font-size: 1.05rem;
+      color: var(--monie-dark);
+      margin-bottom: 0.3rem;
+    }
+
+    .notice-text p {
+      font-size: 0.9rem;
+      color: #991B1B;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="container header-content">
+      <a href="#" class="brand">Moniepoint</a>
+      <span class="badge">Terms of Service Guidelines</span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="container">
+    <div class="hero">
+      <h1>Terms of Service Guidelines</h1>
+      <p>Summary of legal obligations, user responsibilities, and conditions governing the use of Moniepoint digital banking platforms and applications.</p>
+    </div>
+
+    <!-- Warning Box -->
+    <div class="security-notice">
+      <div class="notice-icon">!</div>
+      <div class="notice-text">
+        <h3>Account Restriction & Termination Clause</h3>
+        <p>Moniepoint reserves the absolute right to suspend, limit, or terminate user access or close accounts immediately without prior notification if any violation of terms or suspicious activity is flagged.</p>
+      </div>
+    </div>
+
+    <!-- Guidelines Grid -->
+    <div class="guidelines-grid">
+      
+      <!-- Card 1 -->
+      <div class="guideline-card">
+        <div class="card-header">
+          <div class="card-icon">👤</div>
+          <h2>Eligibility & Registration</h2>
+        </div>
+        <ul class="guideline-list">
+          <li><strong>Age Mandate:</strong> Users must be at least 18 years of age or operating under authorized legal guardian supervision.</li>
+          <li><strong>Accurate Details:</strong> Obligation to submit accurate legal, identity, and contact information, keeping profiles up to date.</li>
+          <li><strong>Non-Transferable:</strong> User accounts, access rights, and services are strictly personal and cannot be assigned or sub-licensed.</li>
+        </ul>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="guideline-card">
+        <div class="card-header">
+          <div class="card-icon">🔐</div>
+          <h2>Security & Liabilities</h2>
+        </div>
+        <ul class="guideline-list">
+          <li><strong>Credential Control:</strong> Users assume full responsibility for safeguarding passwords, transaction PINs, and access codes.</li>
+          <li><strong>No Third-Party Sharing:</strong> Sharing credentials or writing down access codes is strictly prohibited.</li>
+          <li><strong>User Risk:</strong> Except where required by law, Moniepoint is not liable for losses resulting from compromised credentials or unauthorized third-party access.</li>
+        </ul>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="guideline-card">
+        <div class="card-header">
+          <div class="card-icon">⚖️</div>
+          <h2>Acceptable Use & Conduct</h2>
+        </div>
+        <ul class="guideline-list">
+          <li><strong>Lawful Operations:</strong> Absolute prohibition against using accounts for fraudulent activities, illegal transactions, or money laundering.</li>
+          <li><strong>Platform Integrity:</strong> Users must not reverse-engineer, decompile, hack, or exploit the Moniepoint banking app platform.</li>
+          <li><strong>Regulatory Adherence:</strong> Operations remain bound by Central Bank of Nigeria (CBN) regulations and applicable statutory laws.</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; Moniepoint Microfinance Bank. Fully licensed by the Central Bank of Nigeria (CBN) and insured by NDIC.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
