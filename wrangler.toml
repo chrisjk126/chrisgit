@@ -1,0 +1,5 @@
+name = "my-html-site"
+compatibility_date = "2026-10-29"
+
+[assets]
+directory = "./" # Path to the folder with your HTML files
